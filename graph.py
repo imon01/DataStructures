@@ -8,10 +8,12 @@ import sys
 
 
 
-def mht(n, l):
-	""" list l: list of edges
-	"""
-	""" int n: vertex count
+def mht(n, l):	
+	""" 
+	" Minimum height tree solution
+	"
+	" list l: list of edges
+	" int n: vertex count
 	"""
 	def pop(S):
 		if not l:
