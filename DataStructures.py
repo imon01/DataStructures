@@ -6,7 +6,11 @@ import argparse
 import numpy as np
 from random import randint
 
-
+"""
+"
+"Todo: refactor code to Pythonic standard.
+"
+"""
 
 class BaseNode(object):
 	"""
