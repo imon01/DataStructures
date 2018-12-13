@@ -75,11 +75,13 @@ array_list* init_list(size_t list_size)
 	
 	while(list_size)
 	{
-		a->head 
+		//TODO: init array_blocks
+		a->head
+	}
 	return a;
 }
 
-
+//TODO
 array_list* init_list(size_t list_size, size_t block_size)
 {
 	array_list* a = malloc(sizeof(array_list));
