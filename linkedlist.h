@@ -2,16 +2,16 @@
 #define _LINKEDLIST_H_
 
 
-typedef struct  LinkedList_* LinkedList;
+typedef struct  linkedlist_t_* linkedlist_t;
 
-LinkedList malloc_ll(void);
-void free_ll( LinkedList);
+linkedlist_t malloc_ll(void);
+void free_ll( linkedlist_t);
 
-int add_ll( LinkedList, int);
-int search_ll( LinkedList, int);
-int delete_ll( LinkedList , int);
-void reverse_ll(LinkedList);
-void lazymerge_ll(LinkedList, LinkedList);
-void append_ll(LinkedList, LinkedList);
+int add_ll( linkedlist_t, int);
+int search_ll( linkedlist_t, int);
+int delete_ll( linkedlist_t , int);
+void reverse_ll(linkedlist_t);
+void lazymerge_ll(linkedlist_t, linkedlist_t);
+void append_ll(linkedlist_t, linkedlist_t);
 
 #endif
