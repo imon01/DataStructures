@@ -60,7 +60,8 @@ void __test_linked_list__(void)
 	add_ll(l, 100);
 	__test_iter_LL__(l);
 //	__test_delete_LL__(l, 0,2);
-	delete_ll(l, 0);
+	delete_ll_index(l, 0);
+	delete_ll_index(l, 4);
 //	for(int i = 0; i < 10; i++)
 //		__test_search_LL__(l, i);
 //	
@@ -129,7 +130,7 @@ void __test_search_LL__(linkedlist_t l, int val)
 void __test_delete_LL__(linkedlist_t l, int i, int j)
 {
 		while( i< j)	
-			delete_ll(l, i++);
+			delete_ll_value(l, i++);
 }
 
 void __test_reverse_LL__(linkedlist_t l)
@@ -219,7 +220,7 @@ int search_ll( linkedlist_t list, int value)
 	return -1;	
 }
 
-int delete_ll( linkedlist_t list, int value)
+int delete_ll_value( linkedlist_t list, int value)
 {
 
 
@@ -244,6 +245,35 @@ int delete_ll( linkedlist_t list, int value)
 	free(target);	
 
 	return 0;	
+}
+
+
+int delete_ll_index(linkedlist_t list, int index)
+{
+    if(index > list->size)
+    {
+        perror("index out of bounds\n");
+        return 1;
+    }
+ 
+    if(index == 0)
+    {
+        list->root = list->root->next;
+        list->size--; 
+        return 0;
+    }
+
+    node_t curr = list->root;
+    
+    while(--index)
+    {
+        curr = curr->next;
+
+    }
+    curr->next = curr->next->next;
+    list->size--; 
+    return 0;
+
 }
 
 void reverse_ll( linkedlist_t list)

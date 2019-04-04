@@ -9,7 +9,8 @@ void free_ll( linkedlist_t);
 
 int add_ll( linkedlist_t, int);
 int search_ll( linkedlist_t, int);
-int delete_ll( linkedlist_t , int);
+int delete_ll_value( linkedlist_t , int);
+int delete_ll_index( linkedlist_t , int);
 void reverse_ll(linkedlist_t);
 void lazymerge_ll(linkedlist_t, linkedlist_t);
 void append_ll(linkedlist_t, linkedlist_t);
